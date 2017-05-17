@@ -65,7 +65,7 @@ val classPath = Seq(
      "./lib/jline.jar",
      "./lib/jna-4.0.0.jar",
      "./lib/jsearch.jar ",
-     "./lib/jsyntaxpane-0.9.5-b29.jar",
+     "./lib/jsyntaxpane.jar",
      "./lib/matlabscilab.jar",
      "./lib/netlib-java-0.9.3.jar",
      "./lib/objenesis-1.2.jar",

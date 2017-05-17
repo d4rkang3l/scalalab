@@ -318,7 +318,7 @@ public class MatFileReader
             {
                 try
                 {
-                    clean(buf);
+                 //   clean(buf);
                 }
                 catch ( Exception e )
                 {
@@ -361,7 +361,7 @@ public class MatFileReader
      * @throws Exception
      *             all kind of evil stuff
      */
-    private void clean(final Object buffer) throws Exception
+/*    private void clean(final Object buffer) throws Exception
     {
         AccessController.doPrivileged(new PrivilegedAction<Object>()
         {
@@ -384,7 +384,7 @@ public class MatFileReader
             }
         });
     }       
-    
+    */
     
     
     /**
