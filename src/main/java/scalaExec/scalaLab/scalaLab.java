@@ -58,7 +58,6 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
     private JMenu editMenu;   // edit menu for the jSyntaxPane based ScalaLab editor
     private JMenuItem displayCurrentAbbreviationsJMenuItem;     // abbreviations programmed with the "Abbreviations.txt" file
     private JMenuItem displayScalaSciVariables;  // display the current variables of the workspace
-    private JMenuItem fastScriptTemplateJMenuItem;   // constructs a template for a fast script (that script avoids global variables, making the computation faster)
     private JMenuItem fileExplorerFocusMenuItem;
     private JMenuItem rsyntaxAreaEditJMenuItem;
     private JMenuItem editJMenuItem;
@@ -934,11 +933,7 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
                 jeditJMenuItem1.setMnemonic('J');
                 jeditJMenuItem1.setAccelerator(KeyStroke.getKeyStroke("ctrl J"));
                 jeditJMenuItem1.setFont(GlobalValues.uifont);
-                fastScriptTemplateJMenuItem = new JMenuItem(new fastScriptAction());
-                fastScriptTemplateJMenuItem.setToolTipText("Generates template for fast script using local vars");
-                fastScriptTemplateJMenuItem.setMnemonic('F');
-                fastScriptTemplateJMenuItem.setAccelerator(KeyStroke.getKeyStroke("ctrl F"));
-                fastScriptTemplateJMenuItem.setFont(GlobalValues.uifont);
+             
                 exitJMenuItem = new JMenuItem("Exit");
                 exitJMenuItem.addActionListener(new java.awt.event.ActionListener() {
                     public void actionPerformed(ActionEvent e) {
@@ -951,8 +946,7 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
                 editMenu.add(jeditJMenuItem1);
                 editMenu.add(displayScalaSciVariables);
                 editMenu.add(tableDisplayScalaSciVariables);
-                editMenu.add(fastScriptTemplateJMenuItem);
-                editMenu.add(displayCurrentAbbreviationsJMenuItem);
+                   editMenu.add(displayCurrentAbbreviationsJMenuItem);
                 FileMenu.add(saveEditorTextJMenuItem);
                 FileMenu.add(saveAsEditorTextJMenuItem);
                 FileMenu.add(loadEditorTextJMenuItem);
@@ -1704,18 +1698,7 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
                 controlPrecisionJMenuItem.setToolTipText("Controls verbose on/off, the precision displayed for floating point numbers, truncation of large matrices/vectors");
                 controlPrecisionJMenuItem.setFont(GlobalValues.uifont);
                 controlPrecisionJMenuItem.addActionListener(new controlPrecisionAction());
-                /*
-                JMenuItem  controlFastScriptingModeJMenuItem = new JMenuItem("Control Fast Scripting Mode");
-                controlFastScriptingModeJMenuItem.setFont(GlobalValues.uifont);
-                controlFastScriptingModeJMenuItem.setToolTipText("Controls the transformation of the script to an object wrapped one for speed improvement. However, bindings of variables are lost");
-                controlFastScriptingModeJMenuItem.addActionListener(new ActionListener() {
-                
-                public void actionPerformed(ActionEvent e) {
-                new controlScriptingModeToolbar();
-                
-                }
-                });
-                */
+              
                 paneAdjustFontMenuItem = new JMenuItem("Adjust Fonts of Interpreter Pane and ScalaLab edtor (good choices: DejaVu Sans Mono, Courier, Courier New, Monospaced)"); // configIcon);
                 paneAdjustFontMenuItem.setToolTipText("The particular font used can be important, DejaVu Sans Mono, Courier, Courier New, Monospaced seem to perform well");
                 paneAdjustFontMenuItem.addActionListener(new paneFontAdjusterAction());
@@ -2847,12 +2830,24 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
 
     // edit the specified file within the Interpreter Pane
     public void scalaLabPaneEdit(String fileName) {
-        File loadFile = new File(fileName);
+      
+                File loadFile = new File(fileName);
         try {
             FileReader fr = new FileReader(loadFile);
-            scalaExec.Interpreter.GlobalValues.editorPane.read(fr, null);  // read the file into the Pane editor
+            
+          StringBuilder sb=new StringBuilder();
+            
+            while (true) {
+                int ch = fr.read();
+                if (ch==-1) break;
+                sb.append((char)ch);
+            }
+            
+            
+             scalaExec.Interpreter.GlobalValues.editorPane.setText(sb.toString()); 
+     //    scalaExec.Interpreter.GlobalValues.editorPane.read(fr, null);  // read the file into the Pane editor
 
-            GlobalValues.globalInterpreterPane.updateDocument();  // update the document kept by the pane
+          //  GlobalValues.globalInterpreterPane.updateDocument();  // update the document kept by the pane
 
             GlobalValues.editingFileInPane = fileName;   // keep the currently edited file name
             if (GlobalValues.scalalabMainFrame.recentPaneFiles.contains(fileName) == false) {

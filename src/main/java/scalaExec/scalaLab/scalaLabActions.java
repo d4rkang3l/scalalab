@@ -359,9 +359,18 @@ class loadEditorTextAction extends AbstractAction  {
                  File loadFile = new File(loadFileName);
                     try {
                        FileReader  fr = new FileReader(loadFile);
-                       scalaExec.Interpreter.GlobalValues.editorPane.read(fr, null);
                        
-                       GlobalValues.globalInterpreterPane.updateDocument();
+                        
+            StringBuilder sb=new StringBuilder();
+            
+            while (true) {
+                int ch = fr.read();
+                if (ch==-1) break;
+                sb.append((char)ch);
+            }
+                      scalaExec.Interpreter.GlobalValues.editorPane.setText(sb.toString());
+                       
+                    //   GlobalValues.globalInterpreterPane.updateDocument();
                        
                        GlobalValues.editingFileInPane = loadFileName;
                        GlobalValues.scalalabMainFrame.recentPaneFiles.add(loadFileName);
@@ -380,17 +389,6 @@ class loadEditorTextAction extends AbstractAction  {
       }
     }
 
-   
-   class fastScriptAction extends AbstractAction {
-       public fastScriptAction()  { super("Generate template for fast script");}
-       public void actionPerformed(ActionEvent e) {
-                           
-           String fastScriptTemplate = " // define your global vals/vars here. This will become fields with relatively slow access \n\n\n  def myComputation() =  { \n\n"+
-                   "// vars/vals defined here will be locals with fast access but not binded by the Interpreter \n\n\n }\n\n"+
-                   "myComputation()\n\n";
-           scalaExec.Interpreter.GlobalValues.editorPane.setText(fastScriptTemplate);
-                    }
-       }
    
       class jeditAction extends AbstractAction {
        public jeditAction()  { super("jEdit Editor - supports Scala editing if you name the files with .scala extension");}
