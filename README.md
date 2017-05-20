@@ -3,7 +3,7 @@
 ## Easy and Efficient Matlab-like scientific computing in Scala ##
 
 
-## Project Summary#
+## Project Summary
 
 `The ScalaLab project aims to provide an efficient scientific programming environment for the Java Virtual Machine. The scripting language is based on the Scala programming language enhanced with high level scientific operators and with an integrated environment that provides a MATLAB-like working style. Also, all the huge libraries of Java scientific code can be easily accessible (and many times with a more convenient syntax). The main potential of the ScalaLab is numerical code speed and flexibility. The statically typed Scala language can provide speeds of scripting code similar to pure Java. A major design priority of ScalaLab is its user-friendly interface. We like the user to enjoy writing scientific code, and with this objective we design the whole framework.`
 

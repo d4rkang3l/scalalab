@@ -2831,11 +2831,13 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
     // edit the specified file within the Interpreter Pane
     public void scalaLabPaneEdit(String fileName) {
       
+        
                 File loadFile = new File(fileName);
-        try {
+          StringBuilder sb=new StringBuilder();
+
+                try {
             FileReader fr = new FileReader(loadFile);
             
-          StringBuilder sb=new StringBuilder();
             
             while (true) {
                 int ch = fr.read();
@@ -2844,7 +2846,7 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
             }
             
             
-             scalaExec.Interpreter.GlobalValues.editorPane.setText(sb.toString()); 
+               scalaExec.Interpreter.GlobalValues.editorPane.setText(sb.toString()); 
      //    scalaExec.Interpreter.GlobalValues.editorPane.read(fr, null);  // read the file into the Pane editor
 
           //  GlobalValues.globalInterpreterPane.updateDocument();  // update the document kept by the pane
@@ -2857,7 +2859,8 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
         } catch (FileNotFoundException ex) {
             System.out.println("Cannot open file " + loadFile + " for loading editor text " + ex.getMessage());
         } catch (Exception ex) {
-            System.out.println("Exception reading editor's text " + ex.getMessage());
+         //   System.out.println("Exception reading editor's text " + ex.getMessage());
+            scalaExec.Interpreter.GlobalValues.editorPane.setText(sb.toString()); 
         }
 
     }
