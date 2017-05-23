@@ -1242,7 +1242,7 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
                 interruptciforLoopJMenuItem.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        cifor.Syntax.enableInterrupt();
+            scalaExec.Interpreter.GlobalValues.interruptcifor=true;
                     }
                 });
                 scalaInterpreterMenu.add(interruptciforLoopJMenuItem);

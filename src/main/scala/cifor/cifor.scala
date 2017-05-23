@@ -75,15 +75,11 @@ class InlineUtil[C <: Context with Singleton](val c: C) {
 
 object Syntax {
 
- var iflag = false   // interrupt flag
- def  enableInterrupt = { iflag = true }
- def  disableInterrupt = { iflag = false }
- 
   def ciforMacro[A](c: Context)(init: c.Expr[A])
      (test: c.Expr[A => Boolean], next: c.Expr[A => A])
      (body: c.Expr[A => Unit]): c.Expr[Unit] = {
 
-    disableInterrupt
+  
     import c.universe._
     val util = SyntaxUtil[c.type](c)
     val index = util.name("index")
@@ -101,8 +97,10 @@ object Syntax {
     val tree = if (util.isClean(test, next, body)) {
        var intTree = q""" 
      
- if  ($iflag == true)
-        break
+ if  (scalaExec.Interpreter.GlobalValues.interruptcifor == true) {
+        scalaExec.Interpreter.GlobalValues.interruptcifor = false
+        throw new Exception
+        }
 """ 
         
         q"""
