@@ -1,4 +1,26 @@
 
+var n=3000
+
+var x=rand(n,n)
 
 
+tic
+var xx=x*x
+var tm=toc
 
+
+val divide = new PartialFunction[Int, Int] {
+      def apply(x: Int) = 42/x
+      def isDefinedAt(x: Int) = x != 0
+      }
+      
+      
+      
+      divide.isDefinedAt(9)
+      
+      
+      val divide2: PartialFunction[Int, Int] = {
+           case d: Int if d != 0=> 42/d
+           }
+           
+           divide2.isDefinedAt(0)
