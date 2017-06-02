@@ -54,7 +54,6 @@ class RichDouble2DArray(final var  v: Array[Array[Double]]) extends AnyRef with 
   
   final var  Nrows  = v.length  // number of rows
   final var  Ncols =  v(0).length  // number of columns
-  final var isLargeMatrix = if (Ncols * Nrows > 1000) true else false
   final def numRows() = Nrows  
   final def numColumns() = Ncols
   final def length() = Nrows*Ncols  // the total number of elements of the array
@@ -4042,17 +4041,11 @@ while (r<sN) {
   
 
   // Array[Array[Double]] * Array[Array[Double]]
- final def * (that: Array[Array[Double]]): RichDouble2DArray = {
-   if (isLargeMatrix==true )   // seems a large multiplication problem
-      this *& that
-      else
+ final def * (that: Array[Array[Double]]): RichDouble2DArray =  {
    new RichDouble2DArray(scalaSci.SerialMult.times(this.v, that))
  }
    
  override final def * (that: RichDouble2DArray): RichDouble2DArray =  {
-    if (isLargeMatrix==true )   // seems a large multiplication problem
-       this *& that
-       else
   new RichDouble2DArray(scalaSci.SerialMult.times(this.v, that.v))
  }
  
