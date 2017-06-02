@@ -69,7 +69,7 @@ public class rsyntaxEditor   {
     org.fife.ui.rsyntaxtextarea.RSyntaxTextArea  jep;
     
 
-    public void rsyntaxEdit(String selectedValue) {
+    public void jsyntaxEdit(String selectedValue) {
                        
       
                    FileReader fr = null;
@@ -143,7 +143,7 @@ public class rsyntaxEditor   {
             recentFileMenuItem.setFont(GlobalValues.uifont);
             recentFileMenuItem.addActionListener(new ActionListener() {
                 public void actionPerformed(ActionEvent e) {
-             rsyntaxEdit(recentFileName);   // reload the recent file in editor
+             jsyntaxEdit(recentFileName);   // reload the recent file in editor
              
             // update the workingDir
             String pathOfLoadFileName = recentFileName.substring(0, recentFileName.lastIndexOf(File.separatorChar));
