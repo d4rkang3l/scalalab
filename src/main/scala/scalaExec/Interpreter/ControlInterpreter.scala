@@ -57,8 +57,6 @@ for (k<-0 until sf.length) {
         var grResult =  scalaExec.Interpreter.GlobalValues.globalInterpreter.interpret( inputString )
                      if (grResult != null) {
         var rmSuccess = grResult.toString.replace("Success", "")    
-        var idx =rmSuccess.indexOf('=')
-        rmSuccess = rmSuccess.substring(idx, rmSuccess.length)
                
         GlobalValues.consoleOutputWindow.output.append(rmSuccess)
         GlobalValues.consoleOutputWindow.output.setCaretPosition(GlobalValues.consoleOutputWindow.output.getText().length())
