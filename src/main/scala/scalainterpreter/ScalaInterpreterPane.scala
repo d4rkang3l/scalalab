@@ -590,7 +590,7 @@ def setupKeyActions() = {
              
                     scalaExec.Interpreter.GlobalValues.editorPane.setCursor(ScalaInterpreterPaneGlobals.defaultCursor)
               
-                    ScalaInterpreterPaneGlobals.lastResult.toString 
+                    ScalaInterpreterPaneGlobals.lastResult.toString()
                     
                     
             }  // Future

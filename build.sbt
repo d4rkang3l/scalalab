@@ -13,7 +13,7 @@ javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-opt:_","closure-invocations", "l:method")
 
-crossScalaVersions  := Seq("2.12.1")
+crossScalaVersions  := Seq("2.12.2") 
 
 description         := "A MATLAB-like environment)"
 
