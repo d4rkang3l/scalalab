@@ -136,8 +136,7 @@ class ScalaInterpreterPane  extends  JPanel with CustomizableFont {
 "//  Press Control-Space  uses code completion of jsyntaxpane \n"+
 "//  Press TAB expands the abbreviation internal to the jsyntaxpane, e.g. bo<TAB> expands to Boolean (F8 displays these abbreviations) \n"+
 "//  Press F11: expands the selected text with the abbreviations specified with the Abbreviations.txt file   \n"+
-"//  Press F12 to close all displayed figures \n"
-  
+"//  Press F12 to close all displayed figures \n\n";
 
  
    private val ggStatus = new JLabel( "Initializing..." )
