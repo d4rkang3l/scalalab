@@ -47,8 +47,6 @@ https://smile.amazon.com/Scientific-Computing-ScalaLab-Java-Platform/dp/36598459
 `Then execute the appropriate .bat script for Windows or the corresponding .sh script for UNIX users. The script configures the java.library.path and some JVM parameters.`
 
 
-`On Linux and other Unixes, starting ScalaLab from the GUI by double clicking the startup script displays better the results at the output window (when running the startup script from the terminal the output results are not displayed so well).`
-
 
 `To build ScalaLab with SBT:`
 
