@@ -87,6 +87,7 @@ val classPath = Seq(
      "./lib/xmlgraphics-commons.jar"
     )
     
+    
 
 packageOptions += Package.ManifestAttributes(
   "Class-Path" -> classPath.mkString(" "),
