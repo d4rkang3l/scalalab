@@ -4,7 +4,7 @@ version             := ""
 
 organization        := ""
 
-scalaVersion        := "2.12.2" 
+scalaVersion        := "2.12.3" 
 
 javaOptions   ++= Seq("-Xss", "2M", "-Xmx", "4G")
 
