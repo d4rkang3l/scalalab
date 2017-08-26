@@ -45,7 +45,7 @@ public class GlobalValues
 {
 
     
-    static public   String  scalalabBuildVersion = "28-July-17"; 
+    static public   String  scalalabBuildVersion = "26-August-17"; 
    
    static public boolean interruptcifor = false;
     static public ScalaInterpreterPane globalInterpreterPane;  // the interpreter pane object which is the main interface to the Scala interpreter
