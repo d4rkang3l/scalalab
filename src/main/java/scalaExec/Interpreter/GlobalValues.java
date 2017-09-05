@@ -45,9 +45,8 @@ public class GlobalValues
 {
 
     
-    static public   String  scalalabBuildVersion = "26-August-17"; 
+    static public   String  scalalabBuildVersion = "5-Sep-17"; 
    
-   static public boolean interruptcifor = false;
     static public ScalaInterpreterPane globalInterpreterPane;  // the interpreter pane object which is the main interface to the Scala interpreter
     static public Vector <String> interpreterClassPathComponents = new Vector<>();  // the class path components of the main interpreter
     
@@ -333,7 +332,9 @@ public class GlobalValues
         };
 
     static public long  timeForTic; // save the current time in milliseconds to implement tic-toc functionality
-        
+ 
+    static public boolean interruptcifor = false;  // a flag that when it is set true, the cifor loop terminates with an exception
+ 
     static public boolean commandLineModeOn = true;  // execute line-by-line or accumulate buffer until F8?
     static public boolean scalaJarClassesLoaded = false;  // controls the loading/reloading of Scala classes
     
