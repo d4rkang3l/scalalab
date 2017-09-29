@@ -45,7 +45,7 @@ public class GlobalValues
 {
 
     
-    static public   String  scalalabBuildVersion = "5-Sep-17"; 
+    static public   String  scalalabBuildVersion = "29-Sep-17"; 
    
     static public ScalaInterpreterPane globalInterpreterPane;  // the interpreter pane object which is the main interface to the Scala interpreter
     static public Vector <String> interpreterClassPathComponents = new Vector<>();  // the class path components of the main interpreter
