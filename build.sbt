@@ -59,7 +59,6 @@ val classPath = Seq(
      "./lib/jSciJPlasmaJSparseJTransforms.jar",
      "./lib/jarjar-1.1.jar",
      "./lib/javacpp.jar",
-     "./lib/jblas.jar",
      "./lib/jdk6Help.jar",
      "./lib/jhall.jar",
      "./lib/jline.jar",

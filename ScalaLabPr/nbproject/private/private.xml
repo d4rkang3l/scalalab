@@ -2,13 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/java/scalaExec/scalaLab/scalaLab.java</file>
-            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/cifor/cifor.scala</file>
-            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/rsyntaxEdit/ScalaCompletionRSyntaxAction.scala</file>
-            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/java/scalaExec/Interpreter/GlobalValues.java</file>
-            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/rsyntaxEdit/ProcessDoubleClick.scala</file>
-            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/rsyntaxEdit/ProcessWordAtCursorJSyntaxPane.scala</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>
