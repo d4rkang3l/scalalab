@@ -71,7 +71,7 @@ public class scalaLab extends JFrame implements WindowListener, ActionListener {
 
     private JMenu scalaInterpreterMenu;
     private final JMenuItem resetScalaInterpreterItem = new JMenuItem("Reset Scala Interpreter using Scalalab default Imports");
-    private final JMenuItem resetScalaInterpreterNoImportsItem = new JMenuItem("Reset Scala Interpreter not using any ScalaLab related  imports (useful for e.g. avoiding problems with ScalaLab related implicits");
+    private final JMenuItem resetScalaInterpreterNoImportsItem = new JMenuItem("Reset Scala Interpreter not using any ScalaLab related  imports (useful for e.g. avoiding problems with ScalaLab related implicits)");
     private final JMenuItem resetScalaInterpreterEJMLItem = new JMenuItem("Reset Scala Interpreter using Efficient Java Matrix Library of Peter Abeles");
     private final JMenuItem   resetScalaInterpreterCUDAItem = new JMenuItem("Reset Scala Interpreter using CUDA Accelerated matrix type");
     private final JMenuItem resetScalaInterpreterEIGENItem = new JMenuItem("Reset Scala Interpreter using EIGEN Library");
