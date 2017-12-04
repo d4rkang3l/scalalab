@@ -5,6 +5,7 @@
         <group>
             <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/scalaSci/Bench.scala</file>
             <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/scalaSci/StaticMaths.scala</file>
+            <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/scalaExec/Interpreter/ControlInterpreter.scala</file>
             <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/scalaSci/RichDouble2DArray.scala</file>
             <file>file:/home/sterg/NBProjects/ScalaLab/src/main/scala/scalaSci/CCMatrix.scala</file>
             <file>file:/home/sterg/NBProjects/ScalaLab/src/main/java/scalaExec/scalaLab/scalaLab.java</file>
