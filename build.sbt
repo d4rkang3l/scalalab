@@ -4,7 +4,7 @@ version             := ""
 
 organization        := ""
 
-scalaVersion        := "2.12.3" 
+scalaVersion        := "2.12.4" 
 
 javaOptions   ++= Seq("-Xss", "2M", "-Xmx", "4G")
 
@@ -13,7 +13,7 @@ javacOptions ++= Seq("-source", "1.8", "-target", "1.8")
 
 scalacOptions ++= Seq("-deprecation", "-unchecked", "-opt:_","closure-invocations", "l:method")
 
-crossScalaVersions  := Seq("2.12.2") 
+crossScalaVersions  := Seq("2.12.4") 
 
 description         := "A MATLAB-like environment)"
 

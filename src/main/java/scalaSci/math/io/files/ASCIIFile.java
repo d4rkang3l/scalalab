@@ -3,7 +3,6 @@ package scalaSci.math.io.files;
 import java.io.*;
 import java.util.*;
 import scalaSci.math.io.parser.*;
-import sun.util.locale.StringTokenIterator;
 
 // var spctrFile = getFile("File for spectrogram data", true)
 // var rd =  scalaSci.math.io.files.ASCIIFile.readLines(new java.io.File(spctrFile))

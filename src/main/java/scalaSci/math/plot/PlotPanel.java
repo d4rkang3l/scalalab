@@ -39,7 +39,6 @@ import com.lowagie.text.pdf.PdfWriter;
 import java.awt.Graphics2D;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import sun.security.jca.GetInstance;
 
 
 // this class extends the JPanel class in order to cope with plots
